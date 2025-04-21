@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Your Tea Result</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      font-family: 'Helvetica', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .result-box {
+      background-color: #f0f0f0;
+      padding: 40px;
+      border-radius: 15px;
+      max-width: 600px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      animation: fadeInBox 1.4s ease-in;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    #resultText {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    #resultImage {
+      margin-top: 25px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .home-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #555;
+    }
+
+    @keyframes fadeInBox {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="result-box">
+    <h1>Your Tea Personality</h1>
+    <p id="resultText">Loading...</p>
+    <img id="resultImage" src="" alt="Tea result image" />
+    <a href="../index.html" class="home-button">🏠 Home</a>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+const text = params.get("text");
+const image = params.get("image");
+
+const resultText = document.getElementById("resultText");
+const resultImage = document.getElementById("resultImage");
+
+resultText.innerText = text || "Oops! No result found.";
+
+if (image) {
+  resultImage.src = `images/${image}`;
+  resultImage.style.display = "block";
+}
+
+
+    if (image) {
+      resultImage.src = `images/${image}`;
+      resultImage.style.display = "block";
+    }
+  </script>
+</body>
+</html>

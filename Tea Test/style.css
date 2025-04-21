@@ -1,0 +1,159 @@
+body { 
+    font-family: 'Palatino Linotype', 'Palatino', serif;
+    margin: 0;
+    padding: 0;
+}
+
+.question p {
+font-weight: 700;
+}
+
+/* ------ Layout ------ */ 
+.container { 
+    display: flex; 
+    justify-content: center; 
+    height: 100vh; 
+    flex-direction: column;
+}
+
+.header {
+    height: 20vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.footer { 
+    height: 20vh;
+}
+
+.middle { 
+    width: 100vw; 
+    height: 60vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: start;
+    padding-top: 20px;
+}
+
+.quiz-form {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 20px;
+}
+
+.question {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+input[type=submit] {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: flex-start;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+label {
+    display:block;
+    margin-bottom: 10px;
+}
+
+.answer {
+    margin-bottom: 6px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.quiz-form {
+    animation: fadeIn 1.2s ease-out;
+}
+
+.button-container {
+    justify-content: center;
+    display: flex;
+}
+
+.question {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.question:nth-child(1) { animation-delay: 0.2s; }
+.question:nth-child(2) { animation-delay: 0.4s; }
+.question:nth-child(3) { animation-delay: 0.6s; }
+.question:nth-child(4) { animation-delay: 0.8s; }
+.question:nth-child(5) { animation-delay: 1s; }
+.question:nth-child(6) { animation-delay: 1.2s; }
+.question:nth-child(7) { animation-delay: 1.4s; }
+.question:nth-child(8) { animation-delay: 1.6s; }
+
+
+/* steam concept */
+
+/* .steam {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    animation: steam-rise 3s ease-in-out infinite;
+    filter: blur(4px);
+    z-index: 10;
+}
+
+
+@keyframes steam-rise {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(0) scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateX(-50%) translateY(-30px) scale(1.2);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-60px) scale(1);
+    }
+} */
+
+.home-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #45a049;
+  }
+  
