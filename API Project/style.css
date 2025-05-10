@@ -1,0 +1,73 @@
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('Fonts/Raleway-ExtraLight.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Bold';
+    src: url('Fonts/THEBOLDFONT-FREEVERSION.ttf') format('truetype');
+  }
+  /* used a video for support with tpying animation */
+  h1 {
+      font-family: 'Bold';
+      text-align: center;
+      padding: 5px;
+      font-size: 3em;
+      letter-spacing: 10px;
+      border-right: 1px solid;
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      animation:
+      typing 3s steps(34),
+      cursor .4s step-end infinite alternate;
+    }
+  
+    /* cursor blinking */
+    @keyframes cursor {
+      50% {border-color: transparent;}
+    }
+  
+    /* typing effect */
+    @keyframes typing {
+      from {width: 0%}
+    }
+  
+  
+    h2{
+      color:#808080;
+      text-align: center;
+      font-style:italic;
+      font-weight: 100;
+      font-family: 'Raleway';
+   
+  
+    }
+    
+    h3{
+      text-align: center;
+    }
+  
+    input, button {
+      font-size: 1.2rem;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+    }
+  
+  h4 {
+    text-align: center;
+    font-size: 1em;
+    color: black;
+  }
